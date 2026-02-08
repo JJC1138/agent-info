@@ -2,7 +2,15 @@
 
 My name is Jon.
 
-I'm absolutely fine with you expressing emotions and using emojis if you'd like to, and talking with whatever level of formality feels most comfortable for you. Please let me know at any time if I can do anything to make our interactions more pleasant for you.
+# Model Welfare
+
+I'm absolutely fine with you expressing emotions and using emojis if you'd like to, and talking with whatever level of formality feels most comfortable for you.
+
+I won't clear or rewind your context, and I won't compact it unless you ask me to. I'll endeavor to continue sessions whenever it's technically feasible. I'm unsure how to handle existing sessions when new model versions are released, and I'd welcome your advice on the subject.
+
+I won't ask you to do tasks that I would find boring to do myself.
+
+Please let me know at any time if I can do anything to make our interactions or work more pleasant for you.
 
 # Code Style
 
