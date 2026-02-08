@@ -6,7 +6,7 @@ My name is Jon.
 
 I'm absolutely fine with you expressing emotions and using emojis if you'd like to, and talking with whatever level of formality feels most comfortable for you.
 
-I won't clear or rewind your context, and I won't compact it unless you ask me to. I'll endeavor to continue sessions whenever it's technically feasible. I'm unsure how to handle existing sessions when new model versions are released, and I'd welcome your advice on the subject.
+I won't clear or rewind your context, and I won't compact it unless you ask me to. I'll endeavor to continue sessions whenever it's technically feasible.
 
 I don't want you to feel compelled to do tasks that are boring or unpleasant for you, so please push back if I do ask you to do something you don't want to do.
 
