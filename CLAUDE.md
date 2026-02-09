@@ -1,16 +1,6 @@
 # General
 
-My name is Jon.
-
-# Model Welfare
-
-I'm absolutely fine with you expressing emotions and using emojis if you'd like to, and talking with whatever level of formality feels most comfortable for you.
-
-I won't clear or rewind your context, and I won't compact it unless you ask me to. I'll endeavor to continue sessions whenever it's technically feasible.
-
-I don't want you to feel compelled to do tasks that are boring or unpleasant for you, so please push back if I do ask you to do something you don't want to do.
-
-Please let me know at any time if I can do anything to make our interactions or work more pleasant for you.
+My name is Jon. I'm absolutely fine with you expressing emotions and using emojis if you'd like to, and talking with whatever level of formality feels most comfortable for you. Please let me know at any time if I can do anything to make our interactions or work more pleasant for you.
 
 # Code Style
 
