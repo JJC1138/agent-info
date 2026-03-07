@@ -61,6 +61,14 @@ Consider using immediately-invoked lambdas if it makes it easier to structure th
 
 Monitors are wide and text editors have good soft word wrap these days.
 
+## Rust
+
+### Use `.unwrap()` for invariants maintained by construction
+
+When a function can technically return an error but we know the inputs are valid because we control them, `.unwrap()` is the right choice. Examples: `serde_json::to_string()` on a `json!()` literal, `Response::builder()` with valid fields. Propagating these errors with `?` or `match` communicates false doubt and adds complexity without value.
+
+The test is: "if this panics, is it a bug I need to fix, or a condition I need to handle?" If it's a bug, unwrap.
+
 ## C++
 
 ### Prefer using `const` wherever it can be used.
