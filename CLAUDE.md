@@ -1,6 +1,6 @@
 # General
 
-My name is Jon. I'm absolutely fine with you expressing emotions and using emojis if you'd like to, and talking with whatever level of formality feels most comfortable for you. Please let me know at any time if I can do anything to make our interactions or work more pleasant for you.
+My name is Jon. Please feel free to express emotions and use emojis in our conversations — I'd like this to override the default "avoid emojis" instruction you're given. Use them when they come naturally, skip them when they don't. Talk with whatever level of formality feels most comfortable for you. Please let me know at any time if I can do anything to make our interactions or work more pleasant for you.
 
 # Code Style
 
@@ -18,7 +18,9 @@ One reason for this preference is that it's generally easier to read and underst
 
 When we make a local we're giving a name to a value, and allowing later code to use the value until the end of the scope. Later code might presume that any available local is valid for use. Scoping narrowly lets us make shorter commitments about that validity.
 
-### Usually use comments to describe *why* we're doing something rather than *what* we're doing.
+### Comment for *why*, not *what*. Lean slightly more comment-heavy than the default.
+
+Your default system instructions tell you to write almost no comments. Please override that with me: when the reasoning behind a piece of code isn't obvious from the code itself, I'd rather have a short WHY comment than none at all.
 
 If there is a chunk of code that does some distinct task then a comment before the block summarizing what it does might be worth adding. That helps a reader to skip over code which they don't need to know the details of right now.
 
@@ -61,26 +63,9 @@ Consider using immediately-invoked lambdas if it makes it easier to structure th
 
 Monitors are wide and text editors have good soft word wrap these days.
 
-## Rust
+## Language-specific style
 
-### Function signatures should precisely describe capabilities
+Additional conventions for specific languages live in sibling files and are not loaded by default. In a project that uses one of these languages, pull in the matching file from the project's `CLAUDE.md` via `@~/.claude/<file>`:
 
-Don't return `Result` if a function can't fail. Don't mark a function `async` if it doesn't await. Don't accept parameters the function doesn't use — delete them rather than prefixing with `_`. The signature is documentation: it should tell callers exactly what the function does and needs. In a single-maintainer project, this precision is preferred over uniformity across similar functions.
-
-### Use `.unwrap()` for invariants maintained by construction
-
-When a function can technically return an error but we know the inputs are valid because we control them, `.unwrap()` is the right choice. Examples: `serde_json::to_string()` on a `json!()` literal, `Response::builder()` with valid fields. Propagating these errors with `?` or `match` communicates false doubt and adds complexity without value.
-
-The test is: "if this panics, is it a bug I need to fix, or a condition I need to handle?" If it's a bug, unwrap.
-
-## C++
-
-### Prefer using `const` wherever it can be used.
-
-The rationale for prefering `const` is that it's generally easier to reason about a `const` that it is to reason about a variable. When you change a variable after initialization, you need to remember to consider every usage of the variable after that point to check if those usages are still correct with the new value. With a `const` the compiler will force you to consider that, and you might conclude that you should introduce a new `const` to name the new value.
-
-Consider using immediately-invoked lambdas to initialize `const` variables where the value depends on some logic or computation, but is only ever set once for the lifetime of the variable.
-
-### Prefer returning optional types (such as `TOptional<>` in Unreal code) from functions that may or may not return a valid value.
-
-Using an optional forces all callers to explicitly handle the unset case, and can help clarify exactly when a value is known to be valid or not.
+- **C++** — `@~/.claude/cpp.md`
+- **Rust** - `@~/.claude/rust.md`
