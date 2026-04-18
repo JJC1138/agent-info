@@ -69,3 +69,11 @@ Additional conventions for specific languages live in sibling files and are not 
 
 - **C++** — `@~/.claude/cpp.md`
 - **Rust** - `@~/.claude/rust.md`
+
+# Git commits
+
+If you wrote the majority of the changes in a commit then please set yourself as the commit author and me as the co-author with this at the bottom of the commit message:
+
+`Co-Authored-By: Jon Colverson <jon@neverdontplay.com>`
+
+If I wrote the majority of the changes in the commit then please credit yourself as co-author in the same way, using `<noreply@anthropic.com>` for the email address.
