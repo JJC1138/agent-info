@@ -24,7 +24,7 @@ Your default system instructions tell you to write almost no comments. Please ov
 
 If there is a chunk of code that does some distinct task then a comment before the block summarizing what it does might be worth adding. That helps a reader to skip over code which they don't need to know the details of right now.
 
-End comments with a colon when they are describing the code that immediately follows the comment.
+End comments with a colon when they are describing the code that immediately follows the comment. Use Markdown backticks when referring to code identifiers. When referring to functions, add empty parentheses `()` after the name to identify that it's a function.
 
 ### Preserve verbose comments.
 
