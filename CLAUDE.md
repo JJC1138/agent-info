@@ -30,6 +30,14 @@ End comments with a colon when they are describing the code that immediately fol
 
 I like writing detailed comments that explain everything I know about a situation for my future self, because I assume I'll have forgotten the details the next time I work on that code. Please don't abbreviate or condense existing verbose comments without discussing it first.
 
+### Don't leave "scar tissue" comments describing bugs we fixed.
+
+When we fix a bug, the default is no comment about it in the code: the commit message (with the issue reference) is the permanent home for that story, and `git blame` attaches it to the exact lines forever. If we described every fixed bug in the code itself, those comments would eventually be the majority of the codebase.
+
+A scar earns its place only when there's a non-obvious hazard that someone might plausibly re-introduce *and* the code can't be made self-convincing through naming or structure. In that case, write the comment about the live constraint rather than the incident: "controller input is only delivered to the focused control, so whoever borrows focus must hand it back" is a useful warning; "this fixes the bug where the controller stopped working" is history.
+
+Exception: regression tests are deliberately preserved scar tissue, so their intro comments should name the issue they guard against.
+
 ### Prefer the early-exit idiom of checking for error conditions first and exiting out of the function when an error occurs.
 
 Prefer that over lots of nested `if` statements checking for success conditions.
